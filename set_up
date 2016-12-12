@@ -1,0 +1,3 @@
+#!/bin/sh
+
+curl -L --user $1:$2 http://downloads.datastax.com/enterprise/opscenter.tar.gz --output opscenter.tar.gz
