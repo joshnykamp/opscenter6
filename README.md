@@ -1,21 +1,18 @@
-To set up opscenter 6.0
+###### To set up opscenter 6.0
 
-./set_up <datastax_username> <datastax_password>
-docker build . -t <image_name> -f OpscDockerfile
-docker run -d -p 8888:8888 --name <container_name> <image_name>
+1. ./set_up datastax_username datastax_password
+2. docker build . -t <image_name> -f OpscDockerfile
+3. docker run -d -p 8888:8888 --name <container_name> <image_name>
 
-#For example
-# docker build . -t joshnykamp/opscenter -f OpscDockerfile
-# docker run -d -p 8888:8888 --name joshnykampopscenter joshnykamp/opscenter
+####### For example
+1. docker build . -t joshnykamp/opscenter -f OpscDockerfile
+2. docker run -d -p 8888:8888 --name joshnykampopscenter joshnykamp/opscenter
 
 When container is up:
+
 http://localhost.com:8888
 
-# Provided without any warranty, these files are intended
-# to accompany the whitepaper about DSE on Docker and are
-# not intended for production and are not actively maintained.
-
-Or use included datastax scripts. 
+Or use included datastax scripts.
 
 To build images run the script ./scripts/build_images.sh. This will create two images named opscenter and dse.
 
